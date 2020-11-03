@@ -1,0 +1,260 @@
+* {
+  font-family: sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.wrapper {
+  width: 100%;
+  min-height: 100%;
+}
+
+.container {
+  padding: 1em 10em;
+}
+@media only screen and (max-width: 769px) {
+  .container {
+    padding: 1em;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+/* nav bar */
+
+nav {
+  background: #444b57;
+  position: sticky;
+  top: 0;
+}
+
+nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 10vh;
+}
+
+.nav {
+  display: flex;
+  min-width: 70%;
+  justify-content: space-between;
+}
+.nav a {
+  color: #f9f9f9;
+}
+
+.jumbotron {
+  background: #444b57;
+  background-image: url(../img/wallpaper-2.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #444b54;
+}
+
+.jumbotron .container {
+  display: flex;
+  justify-content: space-between;
+  min-height: 70vh;
+  padding-bottom: 0;
+  padding-top: 5em;
+}
+
+.text {
+  padding-top: 3em;
+  width: 50%;
+  align-self: flex-start;
+  opacity: 1;
+}
+.text h1 {
+  padding: 0.5em 0;
+  line-height: 1em;
+  font-size: 3em;
+}
+
+.text p {
+  line-height: 1em;
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+.delivery-image {
+  align-self: flex-end;
+  justify-self: right;
+  text-align: right;
+}
+
+button {
+  margin-top: 0.5em;
+  padding: 0.9em;
+  outline: none;
+  border-radius: 20px;
+  border: none;
+  font-size: 1em;
+  color: #f9f9f9;
+}
+.text-btn {
+  background: #b71c1c;
+}
+
+.harmburger {
+  display: none;
+}
+.harmburger div {
+  background: white;
+  width: 35px;
+  height: 3px;
+}
+@media only screen and (max-width: 769px) {
+  .jumbotron .container {
+    padding: 0.5em 1em;
+  }
+  .nav {
+    display: none;
+  }
+
+  .delivery-image {
+    display: none;
+  }
+
+  .text {
+    padding-top: 0px;
+    width: 100vw;
+  }
+  .harmburger {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 25px;
+  }
+}
+
+/*----main-----*/
+
+main {
+  margin: 2em auto;
+}
+.food-fusion {
+  padding-top: 1em;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  gap: 3em;
+  justify-content: space-around;
+}
+
+@media only screen and (max-width: 769px) {
+  .food-fusion {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    align-items: center;
+  }
+}
+
+.fusion-title {
+  text-align: center;
+  font-size: 30px;
+}
+
+.card {
+  box-shadow: 3px 4px 20px #b71c1c;
+}
+.card-block {
+  width: inherit;
+  position: relative;
+}
+
+.card-block img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*---crusises---*/
+
+.cuisines {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.cuisines img {
+  width: 100%;
+}
+
+/*----footer----*/
+
+footer {
+  background: #444b54;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+}
+
+footer .container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  align-items: center;
+
+  row-gap: 2em;
+  color: #f9f9f9;
+}
+
+.info {
+  grid-column: 1/4;
+  align-self: center;
+  justify-self: center;
+  text-align: center;
+}
+.info h2 {
+  font-size: 3em;
+}
+.info p {
+  font-size: 1.5em;
+}
+
+.info input {
+  min-width: 200px;
+  height: 50px;
+}
+
+.info-btn {
+  border-radius: 0px;
+  background-color: #b71c1c;
+}
+
+footer .container .link {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  text-align: center;
+}
+
+@media only screen and (max-width: 769px) {
+  footer .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+    row-gap: 2em;
+    color: #f9f9f9;
+  }
+  .info {
+    grid-column: 1/1;
+  }
+
+  .info h2 {
+    font-size: 25px;
+  }
+}
