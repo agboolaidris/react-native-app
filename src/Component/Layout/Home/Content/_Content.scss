@@ -1,0 +1,31 @@
+.content {
+  padding: 0;
+  height: 100vh;
+
+  .slide-container {
+    height: 100vh;
+    color: white;
+    .each-fade {
+      position: relative;
+      .image-container {
+        width: 100vw;
+        height: 100vh;
+
+        .img {
+          width: 100%;
+          height: inherit;
+        }
+      }
+    }
+    h2,
+    .content-info {
+      width: 100%;
+      color: white;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translate(0, -50%);
+      text-align: center;
+    }
+  }
+}

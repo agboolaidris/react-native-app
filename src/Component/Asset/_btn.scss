@@ -1,0 +1,17 @@
+%btn {
+  padding: 0.2em;
+}
+
+%btn:hover {
+  background: yellowgreen;
+  text-decoration: none;
+}
+.nav-reserve-btn {
+  border: 1px solid white;
+  @extend %btn;
+}
+.nav-auth-btn {
+  @extend %btn;
+  background: yellowgreen;
+  border: 1px solid white;
+}

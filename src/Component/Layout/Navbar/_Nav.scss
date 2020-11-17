@@ -1,0 +1,39 @@
+.nav-container {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid white;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 3;
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo {
+      font-weight: bold;
+      color: white;
+    }
+    ul {
+      display: flex;
+      list-style: none;
+      min-width: 70%;
+      justify-self: end;
+      justify-content: space-around;
+      margin-top: 10px;
+      a {
+        color: white;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .nav-container {
+    nav {
+      ul {
+        display: none;
+      }
+    }
+  }
+}
