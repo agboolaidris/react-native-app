@@ -1,9 +1,9 @@
 import React from "react";
 import { Fade } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
-import slide1 from "../../../../imgs/slide1.jpg";
-import slide2 from "../../../../imgs/slide2.jpg";
-import slide3 from "../../../../imgs/slide3.jpg";
+import slide1 from "../../../../imgs/banana.jpg";
+import slide2 from "../../../../imgs/pizza.jpg";
+import slide3 from "../../../../imgs/salad.jpg";
 
 const fadeImages = [slide1, slide2, slide3];
 

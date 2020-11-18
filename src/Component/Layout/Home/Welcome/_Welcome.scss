@@ -17,12 +17,29 @@
     .cards {
       .cards-img-container {
         width: inherit;
+        position: relative;
+
+        button {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%);
+          opacity: 0;
+          transition: all 2s ease-out;
+        }
+
         img {
           width: 100%;
+          transition: all 2s ease-out;
         }
       }
       .cards-img-container:hover {
-        opacity: 0.2;
+        img {
+          opacity: 0.1;
+        }
+        button {
+          opacity: 1;
+        }
       }
     }
   }

@@ -1,7 +1,8 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Slide from "./Slide";
-import slide1 from "../../../../imgs/slide1.jpg";
-import slide2 from "../../../../imgs/slide2.jpg";
+import slide1 from "../../../../imgs/burger.jpg";
+import slide2 from "../../../../imgs/banana.jpg";
 
 function Welcome() {
   return (
@@ -29,10 +30,13 @@ function Welcome() {
         </div>
       </div>
       <div className="row">
-        <div className="col-md-4 book-now">
+        <div className="col-md-3 book-now">
           <div className="cards">
             <div className="cards-img-container">
               <img src={slide1} alt="" />
+              <button className="book-now-btn">
+                <Link to="/">Learn More...</Link>
+              </button>
             </div>
             <div>
               <span>
@@ -46,8 +50,28 @@ function Welcome() {
             </div>
           </div>
         </div>
+
+        <div className="col-md-3 book-now">
+          <div className="cards">
+            <div className="cards-img-container">
+              <img src={slide2} alt="" />
+              <button className="book-now-btn">
+                <Link to="/">Book Now...</Link>
+              </button>
+            </div>
+            <div>
+              <span>
+                <i className="fas fa-star"></i>
+                RESERVATIONS
+              </span>
+              <p>
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+                commodo ligula eget dolor.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
-      <div className="col-md-4"></div>
     </div>
   );
 }
