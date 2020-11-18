@@ -1,31 +1,37 @@
 .content {
   padding: 0;
   height: 100vh;
+  background-image: url(../../../../imgs/cafeteria.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation: content 30s forwards ease-out;
+  animation-iteration-count: infinite;
+  .container {
+    padding: 1em;
+    width: inherit;
+    height: inherit;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    .info {
+      color: white;
 
-  .slide-container {
-    height: 100vh;
-    color: white;
-    .each-fade {
-      position: relative;
-      .image-container {
-        width: 100vw;
-        height: 100vh;
-
-        .img {
-          width: 100%;
-          height: inherit;
-        }
+      .company-name {
+        font-weight: bolder;
       }
     }
-    h2,
-    .content-info {
-      width: 100%;
-      color: white;
-      position: absolute;
-      top: 50%;
-      left: 0;
-      transform: translate(0, -50%);
-      text-align: center;
-    }
+  }
+}
+
+@keyframes content {
+  0% {
+    background-image: url(../../../../imgs/cafeteria.jpg);
+  }
+  50% {
+    background-image: url(../../../../imgs/chef.jpg);
+  }
+  100% {
+    background-image: url(../../../../imgs/fog.jpg);
   }
 }

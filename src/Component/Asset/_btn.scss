@@ -15,3 +15,12 @@
   background: yellowgreen;
   border: 1px solid white;
 }
+.content-btn {
+  @extend %btn;
+  border: 1px solid yellowgreen;
+  background: transparent;
+  a {
+    color: white;
+    text-decoration: none;
+  }
+}

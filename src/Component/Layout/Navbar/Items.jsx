@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function Items() {
+function Items({ state }) {
   return (
-    <ul>
+    <ul className={state ? "menu active" : "menu"}>
       <li>
         <Link to="/">Home</Link>
       </li>

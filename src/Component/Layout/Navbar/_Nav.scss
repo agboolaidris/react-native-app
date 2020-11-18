@@ -1,7 +1,9 @@
 .nav-container {
   background-color: rgba(0, 0, 0, 0.3);
   border-bottom: 1px solid white;
+
   position: fixed;
+
   top: 0;
   width: 100vw;
   z-index: 3;
@@ -9,18 +11,24 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    min-height: 50px;
 
     .logo {
       font-weight: bold;
       color: white;
     }
-    ul {
+    .harmburger {
+      display: none;
+    }
+    .menu {
       display: flex;
       list-style: none;
       min-width: 70%;
       justify-self: end;
       justify-content: space-around;
       margin-top: 10px;
+      padding-inline-start: 0px;
+
       a {
         color: white;
       }
@@ -31,8 +39,30 @@
 @media only screen and (max-width: 768px) {
   .nav-container {
     nav {
-      ul {
-        display: none;
+      .harmburger {
+        display: block;
+        z-index: 3;
+      }
+      .menu {
+        transform: translateX(-100vw);
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 80vw;
+        height: 100vh;
+        justify-content: space-evenly;
+        flex-direction: column;
+        transition: all 2s ease-out;
+      }
+
+      .menu.active {
+        margin-top: 0;
+        transform: translateX(0vw);
+
+        background-color: lawngreen;
+        opacity: 1;
+        text-align: center;
       }
     }
   }
