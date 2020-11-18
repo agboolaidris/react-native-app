@@ -15,10 +15,11 @@
     justify-content: start;
     align-items: center;
     .info {
-      color: white;
+      color: $secondary;
 
       .company-name {
         font-weight: bolder;
+        color: $primary;
       }
     }
   }

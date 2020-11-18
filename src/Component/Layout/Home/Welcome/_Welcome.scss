@@ -1,0 +1,47 @@
+.welcome {
+  .slide-container {
+    width: 100%;
+    height: max-content;
+
+    .image-container {
+      width: inherit;
+
+      img {
+        width: 100%;
+        max-height: 300px;
+      }
+    }
+  }
+  .book-now {
+    margin-top: 2em;
+    .cards {
+      .cards-img-container {
+        width: inherit;
+        img {
+          width: 100%;
+        }
+      }
+      .cards-img-container:hover {
+        opacity: 0.2;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .welcome {
+    .slide-container {
+      width: 100%;
+      height: max-content;
+      padding: 1em;
+      .image-container {
+        width: inherit;
+
+        img {
+          width: 100%;
+          max-height: 300px;
+        }
+      }
+    }
+  }
+}

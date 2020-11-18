@@ -3,24 +3,24 @@
 }
 
 %btn:hover {
-  background: yellowgreen;
+  background: $primary;
   text-decoration: none;
 }
 .nav-reserve-btn {
-  border: 1px solid white;
+  border: 1px solid $secondary;
   @extend %btn;
 }
 .nav-auth-btn {
   @extend %btn;
-  background: yellowgreen;
-  border: 1px solid white;
+  background: $primary;
+  border: 1px solid $secondary;
 }
 .content-btn {
   @extend %btn;
-  border: 1px solid yellowgreen;
+  border: 1px solid $primary;
   background: transparent;
   a {
-    color: white;
+    color: $secondary;
     text-decoration: none;
   }
 }
