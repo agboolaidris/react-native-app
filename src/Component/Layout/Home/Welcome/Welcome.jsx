@@ -1,17 +1,22 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
+import Aos from "aos";
+import "aos/dist/aos.css";
 import Slide from "./Slide";
 import slide1 from "../../../../imgs/burger.jpg";
 import slide2 from "../../../../imgs/banana.jpg";
 
 function Welcome() {
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
   return (
     <div className="container welcome">
       <div className="row">
-        <div className="col-md-6">
+        <div className="col-md-6" data-aos="flip-up">
           <Slide />
         </div>
-        <div className="col-md-6">
+        <div className="col-md-6" data-aos="flip-down">
           <div className="welcome-info">
             <h2>AMAZING MEALS & GREAT ENTERTAINMENT</h2>
 
@@ -30,7 +35,7 @@ function Welcome() {
         </div>
       </div>
       <div className="row">
-        <div className="col-md-3 book-now">
+        <div className="col-md-3 book-now" data-aos="zoom-in">
           <div className="cards">
             <div className="cards-img-container">
               <img src={slide1} alt="" />
@@ -51,7 +56,7 @@ function Welcome() {
           </div>
         </div>
 
-        <div className="col-md-3 book-now">
+        <div className="col-md-3 book-now" data-aos="zoom-up">
           <div className="cards">
             <div className="cards-img-container">
               <img src={slide2} alt="" />
