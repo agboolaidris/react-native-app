@@ -1,3 +1,6 @@
+.App {
+  overflow-x: hidden;
+}
 @import "~bootstrap/scss/bootstrap";
 @import "./Component/Asset/config";
 @import "./Component/Layout/Home/Content/Content.scss";

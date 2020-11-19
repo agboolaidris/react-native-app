@@ -9,7 +9,9 @@ function Content() {
           <h1 className="display-4">
             WELCOME TO <span className="company-name">IRIS RESTURANT</span>
           </h1>
-          <p>The best gourmet restaurant available in Cape Town</p>
+          <span className="sub-title">
+            The best gourmet restaurant available in Cape Town
+          </span>
           <button className="content-btn">
             <Link to="/">Order Now</Link>
           </button>
