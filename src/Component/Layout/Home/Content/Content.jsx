@@ -15,7 +15,8 @@ function Content() {
             WELCOME TO <span className="company-name">IRIS RESTURANT</span>
           </h1>
           <span className="sub-title" data-aos="zoom-in">
-            The best gourmet restaurant available in Cape Town
+            The best gourmet restaurant available in
+            <span className="city"> Lagos, Nigeria.</span>
           </span>
           <button className="content-btn">
             <Link to="/">Order Now</Link>
