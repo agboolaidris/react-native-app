@@ -1,15 +1,16 @@
 %btn {
-  padding: 0.2em;
+  padding: 0.5em;
 }
 
 %btn:hover {
   background: $primary;
   text-decoration: none;
+  color: $secondary;
+  a {
+    color: $secondary;
+  }
 }
-.nav-reserve-btn {
-  border: 1px solid $secondary;
-  @extend %btn;
-}
+
 .nav-auth-btn {
   @extend %btn;
   background: $primary;
@@ -19,8 +20,10 @@
   @extend %btn;
   border: 1px solid $primary;
   background: transparent;
+  padding: 0.6em 1em;
+
   a {
-    color: $secondary;
+    color: $primary;
     text-decoration: none;
   }
 }

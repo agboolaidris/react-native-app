@@ -12,9 +12,34 @@
       }
     }
   }
+
+  .welcome-info {
+    .p {
+      padding-top: 2em;
+    }
+    .sub-title {
+      color: $primary;
+    }
+    h2 {
+      color: $neutral;
+      margin-bottom: 0;
+      padding-bottom: 0;
+      .and {
+        color: $primary;
+      }
+    }
+  }
   .book-now {
     margin-top: 2em;
     .cards {
+      span {
+        color: $neutral;
+      }
+      .star {
+        color: $primary;
+        padding-right: 1em;
+      }
+
       .cards-img-container {
         width: inherit;
         position: relative;

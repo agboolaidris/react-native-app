@@ -18,10 +18,12 @@ function Welcome() {
         </div>
         <div className="col-md-6" data-aos="flip-down">
           <div className="welcome-info">
-            <h2>AMAZING MEALS & GREAT ENTERTAINMENT</h2>
+            <h2>
+              AMAZING MEALS <span className="and"> & </span>GREAT ENTERTAINMENT
+            </h2>
 
-            <span className="lead">We hope to see you soon!</span>
-            <p>
+            <span className="lead sub-title">We hope to see you soon!</span>
+            <p className="p">
               Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
               commodo ligula eget dolor. Aenean massa. Cum sociis natoque
               penatibus et magnis dis parturient montes, nascetur ridiculus mus.
@@ -45,7 +47,7 @@ function Welcome() {
             </div>
             <div>
               <span>
-                <i className="fas fa-star"></i>
+                <i className="fas fa-star star"></i>
                 THE BEST INGREDIENTS
               </span>
               <p>
@@ -56,7 +58,7 @@ function Welcome() {
           </div>
         </div>
 
-        <div className="col-md-3 book-now" data-aos="zoom-up">
+        <div className="col-md-3 book-now" data-aos="zoom-in">
           <div className="cards">
             <div className="cards-img-container">
               <img src={slide2} alt="" />
@@ -66,7 +68,7 @@ function Welcome() {
             </div>
             <div>
               <span>
-                <i className="fas fa-star"></i>
+                <i className="fas fa-star star"></i>
                 RESERVATIONS
               </span>
               <p>

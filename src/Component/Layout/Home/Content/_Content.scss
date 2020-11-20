@@ -1,7 +1,7 @@
 .content {
   padding: 0;
   height: 100vh;
-  background-image: url(../../../../imgs/cafeteria.jpg);
+  background-image: url(../../../../imgs/wallpaper1.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -15,8 +15,8 @@
     justify-content: start;
     align-items: center;
     .info {
-      color: $secondary;
-
+      color: $neutral;
+      font-weight: bold;
       .company-name {
         font-weight: bolder;
         color: $primary;
@@ -34,12 +34,12 @@
 
 @keyframes content {
   0% {
-    background-image: url(../../../../imgs/cafeteria.jpg);
+    background-image: url(../../../../imgs/wall1.jpg);
   }
   50% {
-    background-image: url(../../../../imgs/chef.jpg);
+    background-image: url(../../../../imgs/wall2.jpg);
   }
   100% {
-    background-image: url(../../../../imgs/fog.jpg);
+    background-image: url(../../../../imgs/wall3.jpg);
   }
 }

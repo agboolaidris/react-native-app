@@ -11,7 +11,7 @@ function Items({ state }) {
         <Link to="/">Order</Link>
       </li>
       <li>
-        <Link to="/" className="nav-reserve-btn">
+        <Link to="/" className="nav-reserve">
           Reservations
         </Link>
       </li>

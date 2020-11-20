@@ -1,8 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import Aos from "aos";
+import "aos/dist/aos.css";
 import Items from "./Items";
 
 function Navbar() {
+  useEffect(() => {
+    Aos.init({ duration: 20000 });
+  }, []);
+
   const [state, setstate] = useState(false);
 
   const handleClick = () => {
@@ -13,7 +19,7 @@ function Navbar() {
     }
   };
   return (
-    <div className="nav-container">
+    <div className="nav-container" data-aos="zoom-in">
       <nav className="container">
         <div className="harmburger" onClick={handleClick}>
           {state ? (

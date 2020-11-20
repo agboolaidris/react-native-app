@@ -1,0 +1,29 @@
+.footer {
+  background: $neutral;
+  .container {
+    padding: 0.8em;
+    h5 {
+      margin-bottom: 0;
+    }
+    .telphone {
+      margin-bottom: 0;
+    }
+    .mail {
+      color: $primary;
+      font-size: 13px;
+    }
+    .address {
+      color: $secondary;
+    }
+  }
+  .copyright {
+    border-top: 1px solid $secondary;
+    background: darken($color: $neutral, $amount: 20%);
+    .icon {
+      i {
+        margin: 0 1em;
+        color: $secondary;
+      }
+    }
+  }
+}

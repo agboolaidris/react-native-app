@@ -12,6 +12,20 @@
     align-items: center;
     flex-direction: column;
     height: inherit;
+    .span {
+      color: $primary;
+    }
+  }
+}
+
+.staff-name {
+  h5 {
+    margin-bottom: 0;
+  }
+  .position {
+    color: $primary;
+    font-size: 10px;
+    margin-bottom: 1em;
   }
 }
 
