@@ -57,7 +57,7 @@ function Footer() {
         <div className="container">
           <div className="row justify-content-between ">
             <div className="col-md-3">
-              <p>© Copyright - Woww 2020</p>
+              <p>© Copyright - IRIS 2020</p>
             </div>
             <div className="col-md-3 icon ">
               <i className="fab fa-instagram"></i>
