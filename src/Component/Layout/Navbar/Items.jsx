@@ -8,7 +8,7 @@ function Items({ state }) {
         <Link to="/">Home</Link>
       </li>
       <li>
-        <Link to="/">Order</Link>
+        <Link to="/order">Order</Link>
       </li>
       <li>
         <Link to="/" className="nav-reserve">
