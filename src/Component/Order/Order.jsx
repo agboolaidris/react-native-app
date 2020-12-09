@@ -1,40 +1,95 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
+import Filter_bar from "./Filter_bar";
 
-function Order({ products }) {
-  //change the heart icon color when click
-  const [state, setstate] = useState(false);
+import Product from "./Product";
 
-  const { product } = products;
-  const Each_product = product.map((index) => {
-    return (
-      <div key={index.id} className="col-md-3 col-6">
-        <div className="cards">
-          <div className="img">
-            <img src={index.image} alt="" />
-          </div>
-          <div className="description">
-            <p>{index.description}</p>
-            <span className="price">{index.price}</span>
-            <i
-              className={`fas fa-heart ${state ? "heart" : "love"}`}
-              onClick={() => (state ? setstate(false) : setstate(true))}
-            ></i>
-          </div>
-        </div>
-      </div>
-    );
+function Order({ foods }) {
+  const { product } = foods;
+
+  const [state, setstate] = useState({
+    product,
+    categories: "",
+    price: "",
+    name: "",
   });
+
+  const filter_categories = (e) => {
+    console.log(e.target.value);
+    if (e.target.value == "") {
+      setstate({
+        ...state,
+        product: product,
+        categories: e.target.value,
+      });
+    } else {
+      setstate({
+        ...state,
+        categories: e.target.value,
+        product: product.filter((index) => {
+          return index.categories.indexOf(e.target.value) >= 0;
+        }),
+      });
+    }
+  };
+
+  const filter_price = (e) => {
+    console.log(e.target.value);
+    const price = e.target.value;
+    setstate({
+      ...state,
+      price: price,
+      product: product.slice().sort((a, b) => {
+        if (price == "lowest") {
+          return a.price > b.price ? 1 : -1;
+        } else if (price == "highest") {
+          return a.price < b.price ? 1 : -1;
+        } else {
+          return a.id > b.id ? 1 : -1;
+        }
+      }),
+    });
+  };
+
+  const filter_name = (e) => {
+    setstate({ ...state, name: e.target.value });
+  };
+
+  const submit_price = (e) => {
+    e.preventDefault();
+    console.log(state.name);
+    const search_product = product.filter((index) => {
+      return index.type === state.name;
+    });
+    console.log(search_product);
+    setstate({
+      ...state,
+      product: search_product,
+    });
+  };
   return (
     <div className="container order-container">
-      <div className="row">{Each_product}</div>
+      <div className="row filter-nav">
+        <Filter_bar
+          price={state.price}
+          categories={state.categories}
+          name={state.name}
+          filter_categories={filter_categories}
+          filter_price={filter_price}
+          filter_name={filter_name}
+          submit_price={submit_price}
+        />
+      </div>
+      <div className="row">
+        <Product products={state.product} />
+      </div>
     </div>
   );
 }
 
 const mapStateToProps = (state) => {
   return {
-    products: state.product,
+    foods: state.product,
   };
 };
 

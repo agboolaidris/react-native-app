@@ -22,4 +22,29 @@
       }
     }
   }
+
+  .filter-nav {
+    background: $neutral;
+    margin: 1em auto 2em;
+    padding: 1em;
+
+    input,
+    select {
+      width: max-content;
+      height: 40px;
+    }
+  }
+}
+
+@media only screen and (max-width: 769px) {
+  .order-container {
+    .filter-nav {
+      div {
+        label {
+          display: block;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
 }
