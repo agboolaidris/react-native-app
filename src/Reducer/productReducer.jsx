@@ -17,6 +17,22 @@ const initial = {
       type: "yam",
       price: 500.6,
     },
+    {
+      id: "product-3",
+      image: food,
+      description: "Pizza With Drink",
+      categories: "local dish",
+      type: "rice",
+      price: 550.3,
+    },
+    {
+      id: "product-4",
+      image: food,
+      description: "Pizza With Drink",
+      categories: "local dish",
+      type: "bean",
+      price: 400.6,
+    },
   ],
 };
 const producetReducer = (state = initial, action) => {

@@ -1,9 +1,10 @@
 .order-container {
   margin: 12vh auto 3em;
   .cards {
-    max-width: 200px;
+    max-width: 300px;
     border: 1px solid darken($color: $secondary, $amount: 20%);
-    box-shadow: 7px 3px $neutral;
+    box-shadow: 3px 4px 5px darken($color: $secondary, $amount: 20%);
+    cursor: pointer;
     img {
       width: 100%;
     }
@@ -13,10 +14,11 @@
         color: $primary;
         float: right;
       }
-      .heart {
+      .love:hover {
         color: $neutral;
         float: right;
       }
+
       p {
         color: $primary;
       }
@@ -27,11 +29,15 @@
     background: $neutral;
     margin: 1em auto 2em;
     padding: 1em;
+    div {
+      text-align: center;
+    }
 
     input,
     select {
-      width: max-content;
+      width: 200px;
       height: 40px;
+      outline: none;
     }
   }
 }
@@ -39,11 +45,13 @@
 @media only screen and (max-width: 769px) {
   .order-container {
     .filter-nav {
-      div {
-        label {
-          display: block;
-          margin-bottom: 0;
-        }
+      .search {
+        display: none;
+      }
+
+      input,
+      select {
+        width: 100px;
       }
     }
   }

@@ -23,6 +23,9 @@ function Items({ state }) {
           Signup
         </Link>
       </li>
+      <li>
+        <Link to="/">cartItem</Link>
+      </li>
     </ul>
   );
 }

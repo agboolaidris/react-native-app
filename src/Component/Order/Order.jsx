@@ -14,8 +14,23 @@ function Order({ foods }) {
     name: "",
   });
 
+  const [cartitems, setcartitems] = useState([]);
+
+  const cartItems = (product) => {
+    const cartItems = cartitems.slice();
+    const alreadyInCart = false;
+    cartItems.forEach((item) => {
+      if (item.id === product.id) {
+        item.count++;
+        alreadyInCart = true;
+      }
+    });
+    if (!alreadyInCart) {
+      cartItems.push({ ...product, count: 1 });
+    }
+  };
+
   const filter_categories = (e) => {
-    console.log(e.target.value);
     if (e.target.value == "") {
       setstate({
         ...state,
@@ -34,7 +49,6 @@ function Order({ foods }) {
   };
 
   const filter_price = (e) => {
-    console.log(e.target.value);
     const price = e.target.value;
     setstate({
       ...state,
@@ -57,16 +71,15 @@ function Order({ foods }) {
 
   const submit_price = (e) => {
     e.preventDefault();
-    console.log(state.name);
     const search_product = product.filter((index) => {
       return index.type === state.name;
     });
-    console.log(search_product);
     setstate({
       ...state,
       product: search_product,
     });
   };
+
   return (
     <div className="container order-container">
       <div className="row filter-nav">
@@ -81,7 +94,7 @@ function Order({ foods }) {
         />
       </div>
       <div className="row">
-        <Product products={state.product} />
+        <Product products={state.product} cartItems={cartItems} />
       </div>
     </div>
   );

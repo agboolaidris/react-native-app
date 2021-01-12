@@ -29,6 +29,7 @@ function Navbar() {
           )}
         </div>
 
+        <Link to="/">cartItems</Link>
         <Link to="/" className="logo">
           <span>The logo</span>
         </Link>

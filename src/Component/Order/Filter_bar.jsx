@@ -11,27 +11,28 @@ function Filter_bar({
 }) {
   return (
     <>
-      <div className="col-md-4">
+      <div className="col-md-4 search">
         <form onSubmit={submit_price}>
           <div>
-            <label htmlFor="">search</label>
-            <input type="text" value={name} onChange={filter_name} />
+            <input
+              type="text"
+              value={name}
+              onChange={filter_name}
+              placeholder="&#xF002; search"
+            />
           </div>
         </form>
       </div>
       <div className="col-md-4 col-6">
-        <label>Price</label>
-
         <select value={price} onChange={filter_price}>
-          <option value="">Any Price</option>
+          <option value="">Filter</option>
           <option value="lowest">Lowest</option>
           <option value="highest">Highest</option>
         </select>
       </div>
       <div className="col-md-4 col-6">
-        <label>Categories</label>
         <select value={categories} onChange={filter_categories}>
-          <option value="">Both</option>
+          <option value="">Type</option>
           <option value="local dish">Local Dish</option>
           <option value="foreign dish">Foreign Dish</option>
         </select>
