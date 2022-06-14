@@ -5,28 +5,37 @@ import { Header } from "../ui";
 
 function Home() {
   return (
-    <SafeAreaView>
-      <Header background="#070" />
-      <Text style={{ padding: 10, borderColor: "red", borderWidth: 2 }}>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque
-        dolore officiis eligendi maxime, iusto excepturi accusamus iure autem
-        illum asperiores nihil quia, consequatur officia maiores, similique unde
-        consequuntur atque repellendus.
-      </Text>
-      <Button title="Tap me!!" color="#070" />
-
-      <TextInput />
+    <SafeAreaView style={{ padding: 5 }}>
       <View
         style={{
-          flex: 1,
-          backgroundColor: "#070",
-          padding: 20,
-          width: 100,
+          height: 50,
           justifyContent: "center",
-          alignItems: "center",
+          alignContent: "center",
+          display: "flex",
         }}
       >
-        <Text>Add</Text>
+        <Text>Goal App </Text>
+      </View>
+      <View
+        style={{
+          //flex: 2,
+          flexDirection: "row",
+          justifyContent: "space-between",
+        }}
+      >
+        <TextInput
+          placeholderTextColor="#070"
+          placeholder="Add Goal"
+          style={{
+            height: 50,
+            borderColor: "#070",
+            borderWidth: 2,
+            borderRadius: 7,
+            padding: 5,
+            width: "60%",
+          }}
+        />
+        <Button title="Add goal" color="#070" />
       </View>
     </SafeAreaView>
   );
